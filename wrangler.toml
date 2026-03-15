@@ -1,0 +1,31 @@
+name = "fileconverter"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# 环境变量说明（在 Cloudflare Pages 控制台配置）
+# Settings → Environment variables → Add variable
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# GOTENBERG_URL        【必填】Gotenberg 服务地址（部署在 Render）
+#   部署方法（免费）：
+#     Render.com → New Web Service → Deploy from image
+#     Image: gotenberg/gotenberg:8
+#     Port: 3000
+#   填写示例：https://your-app-name.onrender.com
+#
+#   Gotenberg 支持的引擎（v5 主力）：
+#     LibreOffice → Office 格式互转 + Office → PDF
+#     Chromium   → HTML/MD → PDF（完美中文渲染）
+#
+#   ⚠️ 注意：Gotenberg/LibreOffice 不支持 PDF → Office（docx/xlsx/pptx）
+#      此方向转换需要 Adobe PDF Services（见下方）
+#
+# ADOBE_CLIENT_ID      【可选/PDF→Office 备用】Adobe PDF Services Client ID
+# ADOBE_CLIENT_SECRET  【可选/PDF→Office 备用】Adobe PDF Services Client Secret
+#   用途：PDF → DOCX / XLSX / PPTX 高精度还原（唯一可靠方案）
+#   注册：https://developer.adobe.com/document-services/
+#   免费额度：500 次/月
+#   不配置：PDF → Office 方向不可用，其他所有转换不受影响
+# ──────────────────────────────────────────────────────────────────────────────
